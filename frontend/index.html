@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT FIXING -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=block"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=block">
+    </noscript>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css"> <!-- global resets & fonts -->
+    <link rel="stylesheet" href="css/home.css"> <!-- main page styles -->
+    <!-- TAB name -->
+    <title>DSA Learning Hub</title>
+</head>
+<!-- the Correct body without animation -->
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- NAV BAR -->
+        <div class="hero-nav">
+            <div class="logo">DSA Learning Hub</div>
+            <nav class="navbar">
+                <a href="/content/index.html">Learn</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <!-- Sign Up Button -->
+                <div class="voltage-button signup">
+                    <!-- THE SIGN UP HAS A FLAW WHICH IS A LINE BELOW IT, REMOVE IT!! -->
+                    <button><a class="signup-link" href="#contact">Sign up</a></button>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 234.6 61.3"
+                        preserveAspectRatio="none" xml:space="preserve">
+                        <filter id="glow">
+                            <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="2"></feGaussianBlur>
+                            <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves="0.3"
+                                result="turbulence"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R"
+                                yChannelSelector="G" result="displace"></feDisplacementMap>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"></feMergeNode>
+                                <feMergeNode in="coloredBlur"></feMergeNode>
+                                <feMergeNode in="coloredBlur"></feMergeNode>
+                                <feMergeNode in="displace"></feMergeNode>
+                                <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                        <path class="voltage line-1" d="M..." fill="transparent" stroke="#fff"></path>
+                        <path class="voltage line-2" d="M..." fill="transparent" stroke="#fff"></path>
+                    </svg>
+                    <div class="dots">
+                        <div class="dot dot-1"></div>
+                        <div class="dot dot-2"></div>
+                        <div class="dot dot-3"></div>
+                        <div class="dot dot-4"></div>
+                        <div class="dot dot-5"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="neon-line"></div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    STRUCTURE<br>
+                    YOUR THINKING!
+                </h1>
+                <p class="hero-tagline">
+                    <span class="static-text">Let us be the</span>
+                    <span class="morphong-text">
+                        <span class="anim-common active">FOUNDATION</span>
+                        <span class="anim-common">GUIDE</span>
+                        <span class="anim-common">SPARK</span>
+                        <span class="anim-common">PATH</span>
+                    </span>
+                    <span class="line2">
+                        <span class="static-text">to your</span>
+                        <span class="morphong-text">
+                            <span class="anim-common active">DSA MASTERY</span>
+                            <span class="anim-common">PROBLEM SOLVING</span>
+                            <span class="anim-common">BRIGHT FUTURE</span>
+                            <span class="anim-common">CAREER GROWTH</span>
+                        </span>
+                    </span>
+                </p>
+                <!-- HERO BUTTON WITH UNIVERSE HOVER ANIMATION -->
+                <button class="button">
+                    <span class="actual-text">START LEARNING</span>
+                    <span aria-hidden="true" class="hover-text">START LEARNING</span>
+                </button>
+            </div>
+            <div class="hero-right">
+                <div class="banter-loader">
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WHY DSA SECTION -->
+    <section class="why-dsa" id="why-dsa">
+        <div class="neon-line2"></div>
+        <div class="section-container">
+            <div class="content-wrapper">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <span class="section-eyebrow">WHY IT MATTERS</span>
+                    <h2 class="section-title">
+                        DSA Is Not About <span style="font-weight: 800;" class="accent"><BIG><BIG>
+                                    Code</BIG></BIG></span><br>
+                        It's About <span class="accent"><BIG><BIG>Thinking</BIG></BIG></span>
+                    </h2>
+                </div>
+                <!-- Facts Grid -->
+                <div class="facts-grid">
+                    <!-- Card 1 -->
+                    <div class="fact-card">
+                        <img src="assets/images/brain.png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Brain Boosting</h3>
+                        <p class="fact-desc">
+                            It trains your brain to think better, solve problems faster, and notice patterns easily.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="fact-card">
+                        <img src="assets/images/smartphone.png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Apps You Use</h3>
+                        <p class="fact-desc">
+                            The apps you use every day run smoothly because DSA works behind the scenes.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="fact-card">
+                        <img src="assets/images/algorithms.png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Efficient Algorithms</h3>
+                        <p class="fact-desc">
+                            DSA shows you how to complete the same task in less time using smarter logic.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="fact-card">
+                        <img src="assets/images/hierarchical.png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Right Data Structures</h3>
+                        <p class="fact-desc">
+                            Picking the right data structure helps your program run faster and handle more data.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="fact-card">
+                        <img src="assets/images/performance.png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Big-O Power</h3>
+                        <p class="fact-desc">
+                            It helps you understand how your code will perform before you even run it.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="fact-card">
+                        <img src="assets/images/interview (1).png" alt="DSA Icon" class="card-icon" />
+                        <h3 class="fact-title">Interview Edge</h3>
+                        <p class="fact-desc">
+                            Practicing DSA improves your thinking skills and helps you perform better in interviews.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- DSA JOURNEY SECTION -->
+    <section class="dsa-journey" id="journey">
+        <!-- ✅ NEW CENTERING WRAPPER (added) -->
+        <div class="journey-center">
+            <div class="neon-line3"></div>
+            <div class="journey-container">
+
+                <!-- Header -->
+                <div class="journey-header content-wrapper">
+                    <span class="journey-eyebrow">YOUR DSA PATH</span>
+                    <h2 class="journey-title">Master DSA One Step at a Time</h2>
+                    <p class="journey-subtitle">
+                        A simple, step-by-step path from basics to advanced.
+                    </p>
+                </div>
+
+                <!-- Vertical Journey -->
+                <div class="journey-timeline">
+                    <div class="timeline-step content-wrapper">
+                        <span class="step-dot"></span>
+                        <div class="step-content">
+                            <h3>Foundations First</h3>
+                            <p>Build logical thinking before diving into complexity.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step content-wrapper">
+                        <span class="step-dot"></span>
+                        <div class="step-content">
+                            <h3>Core Data Structures</h3>
+                            <p>Understand how data is stored, accessed, and used.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step content-wrapper">
+                        <span class="step-dot"></span>
+                        <div class="step-content">
+                            <h3>Algorithms & Patterns</h3>
+                            <p>Learn solution strategies instead of memorizing code.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step content-wrapper">
+                        <span class="step-dot"></span>
+                        <div class="step-content">
+                            <h3>Problem Solving Practice</h3>
+                            <p>Apply what you learn to real coding challenges.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step content-wrapper">
+                        <span class="step-dot"></span>
+                        <div class="step-content">
+                            <h3>Interview Readiness</h3>
+                            <p>Think clearly, code confidently, and solve under pressure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft CTA -->
+                <div class="journey-cta content-wrapper">
+                    <button class="button small" onclick="location.href='/signup'">
+                        <span class="actual-text">BEGIN YOUR JOURNEY</span>
+                        <span aria-hidden="true" class="hover-text">BEGIN YOUR JOURNEY</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- TEACHING PHILOSOPHY -->
+    <section class="learning-approach" id="approach">
+        <div class="neon-line4"></div>
+        <div class="approach-center">
+            <!-- Background Pattern Container -->
+            <div class="approach-bg container">
+                <div class="approach-inner">
+                    <!-- Header -->
+                    <div class="approach-header content-wrapper">
+                        <span class="section-eyebrow">OUR APPROACH</span>
+                        <h2 class="section-title">
+                            How We Teach, and Why It Works
+                        </h2>
+                        <p class="section-subtitle">
+                            Compare traditional learning vs. our student-first approach.
+                        </p>
+                    </div>
+                    <!-- Two-Side Content -->
+                    <div class="approach-columns content-wrapper">
+                        <!-- LEFT SIDE -->
+                        <div class="cards-column">
+                            <h3 class="column-title">How DSA is Usually Taught</h3>
+                            <div class="cards">
+                                <div class="card red content-wrapper" data-row="1">
+                                    <p class="tip">Memorize & Rush</p>
+                                    <p class="second-text">Students memorize solutions, speed over understanding.</p>
+                                </div>
+
+                                <div class="card orange content-wrapper" data-row="2">
+                                    <p class="tip">Fear Mistakes</p>
+                                    <p class="second-text">Errors are punished mentally; risk-averse learning dominates.
+                                    </p>
+                                </div>
+
+                                <div class="card blue content-wrapper" data-row="3">
+                                    <p class="tip">Random Problem Practice</p>
+                                    <p class="second-text">No clear progression; students jump topics inconsistently.
+                                    </p>
+                                </div>
+
+                                <div class="card purple content-wrapper" data-row="4">
+                                    <p class="tip">Short-Term Recall</p>
+                                    <p class="second-text">Knowledge fades after exams; no real retention.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RIGHT SIDE -->
+                        <div class="cards-column">
+                            <h3 class="column-title">How We Teach It</h3>
+                            <div class="cards">
+                                <div class="card red content-wrapper" data-row="1">
+                                    <p class="tip">Understand Ideas</p>
+                                    <p class="second-text">We teach why a solution works, not just how to write it.</p>
+                                </div>
+
+                                <div class="card orange content-wrapper" data-row="2">
+                                    <p class="tip">Safe Learning</p>
+                                    <p class="second-text">Students learn from mistakes without fear; encourages
+                                        experimentation.</p>
+                                </div>
+
+                                <div class="card blue content-wrapper" data-row="3">
+                                    <p class="tip">Structured Practice</p>
+                                    <p class="second-text">Each exercise builds logically, reinforcing concepts
+                                        gradually.
+                                    </p>
+                                </div>
+
+                                <div class="card purple content-wrapper" data-row="4">
+                                    <p class="tip">Lasting Skills</p>
+                                    <p class="second-text">Students retain knowledge long-term and apply it in real
+                                        scenarios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="approach-summary">
+                        Understanding DSA is about thinking clearly, building gradually, and learning safely
+                    </p>
+                    <p class="approach-summary2">
+                        Not rushing or memorizing blindly.
+                    </p>
+
+                </div>
+    </section>
+    <!-- ABOUT US SECTION -->
+    <section class="about-us" id="about">
+        <div class="neon-line5"></div>
+        <div class="about-bg">
+            <div class="abstract-layer"></div>
+            <div class="abstract-layer2"></div>
+            <div class="abstract-layer3"></div>
+        </div>
+
+        <div class="about-center">
+            <div class="about-container">
+
+                <!-- EYEBROW CENTERED -->
+                <span class="section-eyebrow center-eyebrow content-wrapper">ABOUT US</span>
+
+                <!-- LEFT: CONTENT -->
+                <div class="about-content content-wrapper">
+                    <h2 class="about-title">
+                        Designed with clarity,<br>
+                        built with intention.
+                    </h2>
+
+                    <p class="about-text content-wrapper">
+                        This platform was created by learners who understand the confusion,
+                        the gaps, and the pressure that come with learning DSA.
+                    </p>
+                    <p class="about-text content-wrapper">
+                        We focus on structured thinking, clear progression, and concept-first
+                        teaching — so learning feels logical, not overwhelming.
+                    </p>
+
+                    <ul class="about-anchors content-wrapper">
+                        <li>Structured curriculum</li>
+                        <li>Learner-first design</li>
+                        <li>Concept-driven teaching</li>
+                        <li>Real problem focus</li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT: INTERACTIVE FLOATING SHAPES -->
+                <div class="about-visual content-wrapper">
+                    <canvas id="aboutParticles"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- AUTH + FEEDBACK + CONTACT -->
+    <section class="auth-section" id="contact">
+        <div class="neon-line2"></div>
+
+        <div class="auth-center">
+
+            <div class="auth-inner">
+
+                <!-- Header -->
+                <div class="auth-header content-wrapper">
+                    <span class="section-eyebrow">CONNECT</span>
+                    <h2 class="section-title">Access, Share, and Reach Out</h2>
+                    <p class="section-subtitle">
+                        Log in to continue, share your thoughts, or contact us anytime.
+                    </p>
+                </div>
+
+                <!-- Glass Cards -->
+                <div class="auth-cards content-wrapper">
+
+                    <!-- LOGIN / SIGNUP CARD -->
+                    <div class="glass-card" style="--r:-12;" data-text="Login">
+
+                        <div class="glass-form auth-form login-form active">
+                            <h3>Welcome Back</h3>
+
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Password" required />
+
+                            <button type="submit">Login</button>
+
+                            <p class="form-hint">
+                                Don’t have an account?
+                                <span class="link" onclick="switchAuth()">Sign up</span>
+                            </p>
+                        </div>
+
+                        <div class="glass-form auth-form signup-form">
+                            <h3>Create Account</h3>
+
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Password" required />
+                            <input type="password" placeholder="Confirm Password" required />
+
+                            <button type="submit">Sign Up</button>
+
+                            <p class="form-hint">
+                                Already have an account?
+                                <span class="link" onclick="switchAuth()">Login</span>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FEEDBACK CARD -->
+                    <div class="glass-card" style="--r:6;" data-text="Feedback">
+                        <form class="glass-form">
+                            <h3>Your Feedback</h3>
+
+                            <textarea placeholder="Share your experience..." rows="4"></textarea>
+                            <button type="submit">Send</button>
+                            <!-- Thank you message container -->
+                            <div class="feedback-msg"></div>
+                        </form>
+                    </div>
+
+                    <!-- CONTACT CARD -->
+                    <div class="glass-card" style="--r:22;" data-text="Contact">
+                        <div class="glass-form">
+                            <h3>Contact Us</h3>
+
+                            <p>Email: support@yourplatform.com</p>
+                            <p>Response within 24 hours</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- back to top button -->
+    <button id="scrollTopBtn" class="button">
+        <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                    </path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                    <path
+                        d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                    </path>
+                </svg>
+            </span>
+        </div>
+    </button>
+
+    <script src="js/home.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- logo -->
+        <div class="footer-brand">
+            <h2>DSA Learning Hub</h2>
+            <p>
+                Structure your thinking. Build your future.
+                Learn Data Structures & Algorithms with clarity and confidence.
+            </p>
+        </div>
+
+        <!-- LINKS COLUMN 1  Explore -->
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="/content/index.html">Courses</a></li>
+                <li><a href="#journey">Roadmaps</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- LINKS COLUMN 2  Resources -->
+        <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="">Practice</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">Support</a></li>
+            </ul>
+        </div>
+
+        <!-- LINKS COLUMN 3  Legal -->
+        <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Code of Conduct</a></li>
+                <li><a href="">Partners</a></li>
+            </ul>
+        </div>
+
+        <!-- CTA + SOCIAL -->
+        <div class="footer-cta">
+            <ul class="example-2 footer-social-icons">
+
+                <!-- LINKEDIN -->
+                <li class="icon-content">
+                    <a href="https://www.linkedin.com/in/areesha-furqan-100728346/" target="_blank" aria-label="LinkedIn" data-social="linkedin">
+                        <div class="filled"></div>
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zM4.943 13.394V6.169H2.542v7.225zM3.743 5.182c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                    </a>
+                    <div class="tooltip">LinkedIn</div>
+                </li>
+
+                <!-- GITHUB -->
+                <li class="icon-content">
+                    <a href="https://github.com/Areesha-Furqan" target="_blank" aria-label="GitHub" data-social="github">
+                        <div class="filled"></div>
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                    <div class="tooltip">GitHub</div>
+                </li>
+
+                <!-- INSTAGRAM -->
+                <li class="icon-content">
+                    <a href="https://www.instagram.com/a.shey_/" target="_blank" aria-label="Instagram" data-social="instagram">
+                        <div class="filled"></div>
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="tooltip">Instagram</div>
+                </li>
+
+                <!-- YOUTUBE -->
+                <li class="icon-content">
+                    <a href="https://www.youtube.com/@WhoAgrees-me" target="_blank" aria-label="YouTube" data-social="youtube">
+                        <div class="filled"></div>
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                        </svg>
+                    </a>
+                    <div class="tooltip">YouTube</div>
+                </li>
+
+            </ul>
+            <a href="https://mail.google.com/mail/?view=cm&to=ansaribusinesswork@gmail.com" target="_blank"><button class="contact-btn">Contact Us</button></a>
+        </div>
+
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        © 2026 DSA Learning Hub. All Rights Reserved.
+    </div>
+</footer>
+</html>

@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #09243d 0%, #091743 45%, #130a2b 100%);
+    color: #d6c9ff;
+}
+
+/* MAIN WINDOW */
+.stack-window {
+    min-height: 100vh;
+    padding: 25px;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h2 {
+    text-align: center;
+    color: #d6c9ff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: right; /* center the buttons */
+  align-items: center;
+}
+
+/* Back button fixed to extreme left */
+.navbar {
+    margin-right: auto;
+}
+
+.back-nav-btn {
+  display: block;
+  position: absolute; /* fixed to viewport */
+  top: 20px;       /* distance from top edge */
+  left: 20px;      /* distance from left edge */
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  z-index: 1000;   /* ensure it stays on top */
+}
+
+
+.back-nav-btn:before,
+.back-nav-btn:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.back-nav-btn:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back-nav-btn:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.back-nav-btn:hover:before,
+.back-nav-btn:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back-nav-btn:hover:after,
+.back-nav-btn:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.back-nav-btn:hover .button-box,
+.back-nav-btn:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+
+/* Center buttons stay grouped in middle */
+.navbar button:not(.back-nav-btn) {
+    margin: 0 10px;
+}
+
+.navbar button:not(.back-nav-btn) {
+    padding: 14px 34px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0ff, #00e5ff);
+    color: #130a2b;
+    text-shadow: 0 0 5px #0ff;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.navbar button:not(.back-nav-btn):hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px #0ff, 0 0 35px #0ff;
+}
+
+/* ELEMENTS */
+.elements {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.elem {
+    width: 65px;
+    height: 42px;
+    background: linear-gradient(135deg, #0ff4, #0ff2);
+    color: #130a2b;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.4s;
+    box-shadow: 0 0 5px #0ff inset;
+}
+
+.elem:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff inset;
+}
+
+/* BOXES */
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.box {
+    width: 48%;
+    height: 500px;
+    background: rgba(9, 20, 67, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 15px #0ff inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box h3 {
+    text-align: center;
+    color: #d6c9ff;
+    margin-bottom: 10px;
+}
+
+/* DRY RUN CONTENT */
+#dryRun {
+    font-size: 20px;
+    line-height: 1.7;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 5px;
+}
+
+/* STACK VISUALIZATION */
+#stack {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* STACK ITEMS */
+.stack-item {
+    width: 140px;
+    height: 38px;
+    margin: 6px auto;
+    background: linear-gradient(135deg, #0ff, #00e5ff);
+    color: #130a2b;
+    font-weight: bold;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 6px;
+    animation: drop 0.4s ease;
+    box-shadow: 0 4px 10px #0ff, 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stack-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff inset;
+}
+
+@keyframes drop {
+    from { transform: translateY(-25px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* BACK BUTTON INSIDE DRY RUN BOX */
+.back-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    background: linear-gradient(135deg, #0ff, #00e5ff);
+    color: #130a2b;
+    text-shadow: 0 0 5px #0ff;
+    transition: 0.4s;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #0ff, 0 0 35px #0ff inset;
+}
+
+/* BUCKET STYLE STACK VISUALIZATION */
+#stack {
+    position: relative;
+    width: 220px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border-left: 6px solid #0ff4;
+    border-right: 6px solid #0ff4;
+    border-bottom: 10px solid #0ff4;
+    border-radius: 0 0 40px 40px;
+    background: linear-gradient(to bottom, rgba(0,255,255,0.05), rgba(0,255,255,0.02));
+    box-shadow: inset 0 -15px 25px rgba(0,0,0,0.6), 0 12px 25px rgba(0,0,0,0.8);
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#stack::-webkit-scrollbar {
+    display: none;
+}
+
+#stack::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 18px;
+    background: linear-gradient(135deg, #0ff2, #0ff4);
+    border-radius: 50%;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
+}
+
+#stack::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 40px 40px;
+    box-shadow: inset 0 20px 30px rgba(0,0,0,0.6);
+    pointer-events: none;
+}
+
+/* ================= VIDEO MODAL (LinkedList Style) ================= */
+.video-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.video-modal {
+    width: 70%;
+    max-width: 900px;
+    background: rgba(19,10,43,0.95);
+    border-radius: 16px;
+    box-shadow: 0 0 30px #0ff;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-modal-header {
+    position: sticky;
+    top: 0;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(19,10,43,0.95);
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+}
+
+.close-video {
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #0ff;
+    cursor: pointer;
+}
+
+.video-modal-content {
+    overflow-y: auto;
+    padding: 15px 25px;
+}
+
+.video-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0,255,255,0.05);
+}
+
+.video-item:hover {
+    background: rgba(0,255,255,0.15);
+}
+
+/* ================= MAIN VIDEO (MATCH LINKED LIST) ================= */
+#mainVideo {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #0ff;
+    object-fit: contain;
+    background: black;
+}
+

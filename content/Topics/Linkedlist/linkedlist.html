@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linked List Visualization</title>
+    <link rel="stylesheet" href="linkedlist.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <a href="/content/index.html">
+        <button class="back-nav-btn">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+    <div class="nav-right">
+        <button class="nav-btn" id="InsertionBtn">Insertion</button>
+        <button class="nav-btn" id="DeletionBtn">Deletion</button>
+        <button class="nav-btn" id="SearchingBtn">Searching</button>
+        <button class="nav-btn" id="videoBtn">Videos</button>
+    </div>
+</nav>
+
+<!-- ================= LINKED LIST ================= -->
+<section class="linkedlist-container">
+    <div class="linkedlist diagram" id="mainList">
+        <div class="node"><div class="data">Start</div><div class="next">23536</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="data">20</div><div class="next">4786</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="data">30</div><div class="next">436</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="data">40</div><div class="next">326</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="data">50</div><div class="next">9438</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="data">100</div><div class="next">NULL</div></div>
+    </div>
+</section>
+
+<!-- ================= SEARCH KEY ================= -->
+<div id="searchKeyBox" style="display:none; text-align:center; margin-bottom:12px; font-size:18px;">
+    🔍 Searching for value: <b id="searchKey"></b>
+</div>
+
+<!-- ================= INSERT / DELETE CONTROL ================= -->
+<div id="insertControl" style="display:none; text-align:center; margin-bottom:15px;">
+    <button id="addNodeBtn" class="nav-btn">Add</button>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<section class="content">
+    <div class="box dry-run">
+        <h3>Dry Run</h3>
+        <div id="dryRun">Click Insertion to start</div>
+    </div>
+
+    <div class="box visualization">
+        <h3>Visualization</h3>
+        <div id="visualBucket"></div>
+    </div>
+</section>
+
+<!-- ================= VIDEO MODAL ================= -->
+<div class="video-overlay" id="videoOverlay">
+    <div class="video-modal">
+        <div class="video-modal-header">
+            <h2>Linked List Videos</h2>
+            <button class="close-video" id="closeVideo">✖</button>
+        </div>
+
+        <div class="video-modal-content">
+            <div class="video-item" data-video="v1.mp4">
+                <h4>Insertion</h4>
+                <p>Linked List Insertion</p>
+            </div>
+
+            <div class="video-item" data-video="v2.mp4">
+                <h4>Deletion</h4>
+                <p>Linked List Deletion</p>
+            </div>
+
+            <video id="mainVideo" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+<script src="linkedlist.js"></script>
+</body>
+</html>

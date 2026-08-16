@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box;  DO NOT UN COMMENT */
+}
+
+body {
+  font-family: 'Manrope', Arial, sans-serif;
+  background-color: #0b0617;   /* dark, calm base */
+  color: #eae6ff;              /* soft white */
+  overflow-x: hidden;             /* prevent horizontal scroll on body */
+}
+
+
+/* ==============MANROPE FONT SETTING =========================== */
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+
+/* =========================================================================== */

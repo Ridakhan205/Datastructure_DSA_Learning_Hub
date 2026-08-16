@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Visualization</title>
+    <link rel="stylesheet" href="array.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <a href="/content/index.html">
+        <button class="back-nav-btn">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+
+    <div class="nav-right">
+        <button id="traverseBtn">Traversing</button>
+        <button id="insertBtn">Insertion</button>
+        <button id="deleteBtn">Deletion</button>
+        <button id="quickSortBtn">Quick Sort</button>
+        <button id="linearSearchBtn">Linear Search</button>
+        <!-- ONLY CHANGE: onclick -->
+        <button id="videoBtn" onclick="showVideo()">Videos</button>
+
+    </div>
+</div>
+
+<div class="array-container" id="arrayContainer"></div>
+
+<div class="result-window" id="mainContent">
+
+    <div class="dry-run">
+        <h3>Algorithm Dry Run</h3>
+        <div id="dryRun">
+            <p>Click a button to start</p>
+        </div>
+    </div>
+
+    <div class="visual">
+        <h3>Visual Representation</h3>
+        <div id="visualSteps">
+            <p>Visualization will appear here</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== OLD VIDEO SECTION (UNCHANGED) ===== -->
+<div class="video-section hidden" id="videoSection">
+
+    <button class="back-btn" id="backBtn">⬅ Back</button>
+
+    <div class="video-list" id="videoList"></div>
+
+    <div class="video-player hidden" id="videoPlayer">
+        <video id="video" width="100%"></video>
+
+        <div class="video-controls">
+            <button id="startVideo">Start</button>
+            <button id="stopVideo">Stop</button>
+            <button id="resumeVideo">Resume</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= VIDEO MODAL (LINKEDLIST STYLE) ================= -->
+<div class="video-overlay" id="videoOverlay">
+
+    <div class="video-modal">
+
+        <div class="video-modal-header">
+            <h2>Array Videos</h2>
+            <button class="close-video" id="closeVideo">✖</button>
+        </div>
+
+        <div class="video-modal-content">
+
+            <div class="video-item" data-video="v1.mp4">
+                <h4>Array Traversing</h4>
+                <p>Traverse array elements</p>
+            </div>
+
+            <div class="video-item" data-video="videos/array-insertion.mp4">
+                <h4>Array Insertion</h4>
+                <p>Insert element in array</p>
+            </div>
+
+            <div class="video-item" data-video="videos/array-deletion.mp4">
+                <h4>Array Deletion</h4>
+                <p>Delete element from array</p>
+            </div>
+
+            <div class="video-item" data-video="videos/linear-search.mp4">
+                <h4>Linear Search</h4>
+                <p>Search element linearly</p>
+            </div>
+
+            <div class="video-item" data-video="videos/binary-search.mp4">
+                <h4>Binary Search</h4>
+                <p>Binary search algorithm</p>
+            </div>
+
+            <div class="video-item" data-video="videos/bubble-sort.mp4">
+                <h4>Bubble Sort</h4>
+                <p>Bubble sort visualization</p>
+            </div>
+
+            <div class="video-item" data-video="videos/selection-sort.mp4">
+                <h4>Selection Sort</h4>
+                <p>Selection sort algorithm</p>
+            </div>
+
+            <div class="video-item" data-video="videos/insertion-sort.mp4">
+                <h4>Insertion Sort</h4>
+                <p>Insertion sort algorithm</p>
+            </div>
+
+            <div class="video-item" data-video="videos/merge-sort.mp4">
+                <h4>Merge Sort</h4>
+                <p>Merge sort algorithm</p>
+            </div>
+
+            <div class="video-item" data-video="videos/quick-sort.mp4">
+                <h4>Quick Sort</h4>
+                <p>Quick sort algorithm</p>
+            </div>
+
+            <video id="mainVideo" controls>
+                <source src="" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="array.js"></script></body>
+</html>

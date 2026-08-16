@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top left, #09243d 0%, #091743 45%, #130a2b 100%);
+    color: #d6c9ff;
+    font-family: "Segoe UI", sans-serif;
+    padding: 25px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+button:not(.back-nav-btn) {
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #0ff, #00e5ff);
+    border: none;
+    border-radius: 8px;
+    color: #130a2b;
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: 0 0 5px #0ff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:not(.back-nav-btn):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+}
+
+button:not(.back-nav-btn):disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+/* back nav btn */
+.back-nav-btn {
+  display: block;
+  position: absolute; /* fixed to viewport */
+  top: 15px;       /* distance from top edge */
+  left: 20px;      /* distance from left edge */
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  z-index: 1000;   /* ensure it stays on top */
+}
+
+
+.back-nav-btn:before,
+.back-nav-btn:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.back-nav-btn:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back-nav-btn:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.back-nav-btn:hover:before,
+.back-nav-btn:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back-nav-btn:hover:after,
+.back-nav-btn:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.back-nav-btn:hover .button-box,
+.back-nav-btn:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+
+/* ================= ARRAY ================= */
+.array-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.cell {
+    width: 85px;
+    height: 85px;
+    background: #091743;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #d6c9ff;
+    box-shadow: 0 0 5px #0ff inset;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    background: #0ff1;
+    color: #130a2b;
+}
+
+.cell.active,
+.cell.shift {
+    background: #0ff;
+    color: #130a2b;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* ================= RESULT WINDOW ================= */
+.result-window {
+    display: flex;
+    gap: 20px;
+}
+
+.dry-run,
+.visual {
+    flex: 1;
+    background: #091743;
+    padding: 18px;
+    border-radius: 12px;
+    height: 520px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 0 1px #0ff4;
+}
+
+.step {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #130a2b;
+    border-left: 4px solid #0ff;
+}
+
+/* ================= VISUAL STEPS ================= */
+.visual-step {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.v-box {
+    width: 55px;
+    height: 55px;
+    background: #091743;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1.5px solid #0ff;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.v-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    background: #0ff1;
+    color: #130a2b;
+}
+
+.v-box.active,
+.v-box.shift {
+    background: #0ff;
+    color: #130a2b;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* ================= VIDEO SECTION (OLD – UNTOUCHED) ================= */
+.hidden {
+    display: none;
+}
+
+.video-section {
+    width: 100%;
+}
+
+/* ================= VIDEO MODAL (FIXED & CENTERED) ================= */
+.video-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.video-modal {
+    width: 70%;
+    max-width: 900px;
+    background: #130a2b;
+    border-radius: 16px;
+    box-shadow: 0 0 30px #0ff;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: popIn 0.25s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ================= MODAL HEADER ================= */
+.video-modal-header {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.close-video {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #0ff;
+    cursor: pointer;
+}
+
+/* ================= MODAL CONTENT ================= */
+.video-modal-content {
+    padding: 15px 25px;
+    overflow-y: auto;
+}
+
+.video-item {
+    padding: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.video-item:hover {
+    background: rgba(0, 255, 255, 0.15);
+}
+
+/* ================= VIDEO PLAYER ================= */
+/* ================= MAIN VIDEO (MATCH LINKED LIST) ================= */
+#mainVideo {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #0ff;
+    object-fit: contain;
+    background: black;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stack Visualization</title>
+    <link rel="stylesheet" href="stack.css">
+</head>
+
+<body>
+
+    <!-- STACK WINDOW -->
+    <div class="stack-window">
+
+        <a href="/content/index.html">
+                <button class="back-nav-btn">
+                    <div class="button-box">
+                        <span class="button-elem">
+                            <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="button-elem">
+                            <svg viewBox="0 0 46 40">
+                                <path
+                                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                </button>
+            </a>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <button onclick="pushOperation()">Insertion</button>
+            <button onclick="popOperation()">Deletion</button>
+            <button class="nav-btn" id="videoBtn">Videos</button>
+        </nav>
+
+        <!-- ELEMENTS -->
+        <h2>Array Elements</h2>
+        <div class="elements">
+            <div class="elem">10</div>
+            <div class="elem">20</div>
+            <div class="elem">30</div>
+            <div class="elem">40</div>
+            <div class="elem">50</div>
+            <div class="elem">60</div>
+            <div class="elem">70</div>
+            <div class="elem">80</div>
+            <div class="elem">90</div>
+            <div class="elem">100</div>
+        </div>
+
+        <!-- BOXES -->
+        <div class="boxes">
+            <div class="box dry-run">
+                <h3>Dry Run Box</h3>
+                <div id="dryRun"></div>
+            </div>
+
+            <div class="box visual">
+                <h3>Visualization Box</h3>
+                <div id="stack"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= VIDEO MODAL ================= -->
+    <div class="video-overlay" id="videoOverlay">
+        <div class="video-modal">
+
+            <div class="video-modal-header">
+                <h2>Stack Videos</h2>
+                <button class="close-video" id="closeVideo">✖</button>
+            </div>
+
+            <div class="video-modal-content">
+                <div class="video-item" data-video="v1.mp4">
+                    <h4>Push Operation</h4>
+                    <p>Stack Push Operation</p>
+                </div>
+
+                <div class="video-item" data-video="videos/pop.mp4">
+                    <h4>Pop Operation</h4>
+                    <p>Stack Pop Operation</p>
+                </div>
+
+                <div class="video-item" data-video="videos/visual.mp4">
+                    <h4>Stack Visualization</h4>
+                    <p>Visual demonstration of stack</p>
+                </div>
+
+                <video id="mainVideo" controls>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="stack.js"></script>
+</body>
+
+</html>
